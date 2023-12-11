@@ -9,6 +9,15 @@ b = a.cursor()
 sql = "CREATE DATABASE shop"
 b.execute(sql)
 
+a = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="pass",
+  database="shop"
+)
+b = a.cursor()
+
+
 def products():
     sql = """
         CREATE TABLE products(
